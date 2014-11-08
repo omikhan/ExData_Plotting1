@@ -1,5 +1,5 @@
 #read data 
-household_power_consumption <- read.csv("C:/Users/homes/Downloads/household_power_consumption.txt", sep=";", na.strings="?", stringsAsFactors=FALSE)
+household_power_consumption <- read.table(unz("exdata_data_household_power_consumption.zip", "household_power_consumption.txt"),  header=T, quote="\"", sep=";", na.strings = "?", stringsAsFactors=FALSE)
 
 #subset only those data points which are in the specified dates
 household_pc <- household_power_consumption[as.Date(household_power_consumption$Date, "%d/%m/%Y") >= "2007-02-01" & as.Date(household_power_consumption$Date, "%d/%m/%Y") <= "2007-02-02",]
