@@ -23,7 +23,7 @@ plot(household_pc$DateTime, household_pc$Sub_metering_1+ household_pc$Sub_meteri
 lines(household_pc$DateTime, household_pc$Sub_metering_1, type="l")
 lines(household_pc$DateTime, household_pc$Sub_metering_2,col = "red", type="l")
 lines(household_pc$DateTime, household_pc$Sub_metering_3,col = "blue", type="l")
-legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty= c(1,1,1),col=c("black", "red","blue" ))
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty= c(1,1,1),col=c("black", "red","blue" ),cex=1, pt.cex=1.4, bty="n")
 
 
 #Global Reactive Power
