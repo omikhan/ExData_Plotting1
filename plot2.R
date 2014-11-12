@@ -10,3 +10,8 @@ household_pc$DateTime <- as.POSIXct(paste(household_pc$Date, household_pc$Time),
 #Plot 2
 plot(household_pc$DateTime, household_pc$Global_active_power, type="n", xlab = "", ylab = "Global Active Power") 
 lines(household_pc$DateTime, household_pc$Global_active_power, type="l") 
+
+#write the image into png image file
+
+dev.copy(png, file="plot2.png", height=480, width=480)
+dev.off()

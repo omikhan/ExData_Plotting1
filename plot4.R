@@ -29,3 +29,8 @@ legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_
 #Global Reactive Power
 plot(household_pc$DateTime, household_pc$Global_reactive_power, type = "n", xlab = "datetime", ylab = "Global_reactive_power")
 lines (household_pc$DateTime, household_pc$Global_reactive_power, type = "l")
+
+#write the image into png image file
+
+dev.copy(png, file="plot4.png", height=480, width=480)
+dev.off()
